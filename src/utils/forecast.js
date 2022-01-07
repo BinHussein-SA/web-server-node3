@@ -23,12 +23,12 @@ const forecast = (lat,lon,callback)=>{
             callback(body.error.info)
         }
         else {
-            callback(undefined, {
-             location : body.location.name,
-             Description : body.current.weather_descriptions[0],
-             temperature : body.current.temperature,
-             feelsLike : body.current.feelslike
-            })
+            callback(undefined, body.current.weather_descriptions[0] + 
+                ". It is currently " + body.current.temperature + 
+                " degrees out. It feels like " + body.current.feelsLike + 
+                " degrees out. The humidity is " + body.current.humidity + 
+                "%."
+                 )
              
         }
     })

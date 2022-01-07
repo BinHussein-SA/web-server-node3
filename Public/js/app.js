@@ -20,9 +20,8 @@ weatherForm.addEventListener('submit',(e)=>{
                      
                 return messageOne.textContent = body.error;
             }
-            console.log(body.forecast);
             messageOne.textContent = body.location;
-            messageTwo.textContent = JSON.stringify(body.forecast);
+            messageTwo.textContent = body.forecast;
         })
         })
     
